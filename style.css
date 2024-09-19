@@ -1,0 +1,120 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgb(249, 105, 105), rgb(90, 18, 185));
+  padding: 1rem;
+}
+.todo-app {
+  width: 100%;
+  max-width: 54rem;
+  background-color: #fff;
+  margin: 10rem auto 2rem;
+  padding: 4rem 3rem 7rem;
+  border-radius: 1rem;
+}
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.head h2 {
+  font-size: 3rem;
+  padding-right: 3rem;
+}
+.icon {
+  border: 2px solid rgb(0, 0, 0);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.icon i {
+  font-size: 3rem;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(230, 227, 227);
+  border-radius: 3rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.box input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.box button {
+  border: none;
+  outline: none;
+  padding: 1.6rem 5rem;
+  background: #ff5945;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 4rem;
+  font-weight: 700;
+}
+ul li {
+  list-style: none;
+  font-size: 1.7rem;
+  padding: 1.2rem 0.8rem 1.5rem 5rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+ul li::before {
+  content: "";
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  /* background-color: aquamarine; */
+  /* background-image: url(./tick.webp); */
+  background-size: cover;
+  border: 1px solid black;
+  border-radius: 50%;
+  left: 0.8rem;
+  top: 0.9rem;
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+ul li.checked::before {
+  background-image: url(./tick.webp);
+}
+ul li span{
+    cursor: pointer;
+}
+span {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  color: #555;
+  width: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  transition: all 0.3s ease-in;
+  border-radius: 50%;
+}
+.fa-xmark::before{
+top: 1.2rem;
+right: 1.35rem;
+position: absolute;
+}
+span:hover {
+  background-color: #e1dede;
+}
